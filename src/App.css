@@ -1,38 +1,208 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: Arial, sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2b1717;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+  color: #ffffff;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  background-color: #1a0d0d;
+  padding: 15px 0;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 30px;
+  border-bottom: 3px solid #cc1111;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar a:hover {
+  background-color: #cc1111;
+}
+
+.mydiv {
+  border: 2px solid rgb(8, 7, 7);
+  padding: 30px 40px;
+  border-radius: 8px;
+  background-color: #1a0d0d;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  background-color: #cc1111;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #ff4444;
+}
+
+.calc-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+}
+
+.display {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  border: 2px solid #cc1111;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+  min-width: 40px;
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td {
+  padding: 15px 20px;
+  border: 1px solid #cc1111;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.2s;
+}
+
+td:hover {
+  background-color: #cc1111;
+  color: #ffffff;
+}
+
+.horizontal-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  background-color: #1a0d0d;
+  border: 2px solid #cc1111;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.horizontal-form input {
+  background-color: #2b1717;
+  border: 1px solid #cc1111;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.horizontal-form input:focus {
+  border-color: #ff4444;
+}
+
+.login-btn {
+  background-color: #cc1111;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #e61c1c;
+}
+
+.task-box {
+  min-width: 320px;
+}
+
+.task-list {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b1717;
+  border: 1px solid #cc1111;
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+
+.task-text {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.delete-btn {
+  background-color: #cc1111;
+  color: #ffffff;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ff4444;
 }

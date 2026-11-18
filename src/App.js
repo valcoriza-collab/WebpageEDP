@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Nav from './components/Nav';
+import Counter from './pages/Counter';
+import Calculator from './pages/Calculator';
+import Login from './pages/Login';
+import TaskTracker from './pages/TaskTracker';
 
 function App() {
+  const [currentUser, setCurrentUser] = useState("Guest");
+  const [tasks, setTasks] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Nav currentUser={currentUser} taskCount={tasks.length} />
+        <header className="App-header">
+          <Routes>
+            <Route path="/" element={<Counter />} />
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/login" element={<Login setCurrentUser={setCurrentUser} />} />
+            <Route path="/tasks" element={<TaskTracker currentUser={currentUser} tasks={tasks} setTasks={setTasks} />} />
+          </Routes>
+        </header>
+      </div>
+    </BrowserRouter>
   );
 }
 
